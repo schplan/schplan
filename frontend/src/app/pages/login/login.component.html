@@ -1,0 +1,21 @@
+<app-modal heading="Login">
+  <form [formGroup]="loginForm" (submit)="handleSubmit($event)">
+    <label
+      [attr.valid]="loginForm.get('username').valid"
+      [attr.touched]="loginForm.get('username').touched">
+      <span>Username</span>
+      <input formControlName="username" type="text" required/>
+    </label>
+    <label
+      [attr.valid]="loginForm.get('password').valid"
+      [attr.touched]="loginForm.get('password').touched">
+      <span>Password</span>
+      <input formControlName="password" type="password" required/>
+    </label>
+    <div class="actions">
+      <a routerLink="/registration">You don't have an account yet?</a>
+      <button [disabled]="!loginForm.valid">Sign in</button>
+    </div>
+  </form>
+  <app-spinner [visible]="pending$ | async"></app-spinner>
+</app-modal>

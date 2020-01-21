@@ -1,0 +1,23 @@
+{
+  "name": "schplan",
+  "version": "0.1.0",
+  "author": "Christian Cavasin <christian.cavasin@9elements.com>",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "setup": "yarn install",
+    "start:frontend": "cd frontend && yarn run start",
+    "start:backend": "cd backend && yarn run start"
+  },
+  "workspaces": {
+    "packages": [
+      "backend",
+      "frontend",
+      "shared"
+    ],
+    "nohoist": [
+      "**/jasmine",
+      "**/jest"
+    ]
+  }
+}

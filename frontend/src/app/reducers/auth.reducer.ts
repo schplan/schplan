@@ -11,11 +11,11 @@ import {
   setToken,
 } from '../actions/auth.actions';
 
-export type AuthState = {
+export interface AuthState {
   token: string | null;
-  validated: boolean,
+  validated: boolean;
   pending: boolean;
-};
+}
 
 export const initialState: AuthState = {
   token: localStorage.getItem('token') || null,

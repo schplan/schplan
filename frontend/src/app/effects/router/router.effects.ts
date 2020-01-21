@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { catchError, map, switchMap } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { from, of } from 'rxjs';
+import { catchError, map, switchMap } from 'rxjs/operators';
 import { navigate, navigateError, navigateSuccess } from '../../actions/router.actions';
 
 @Injectable()

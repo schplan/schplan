@@ -8,5 +8,5 @@ import { Component, HostBinding, Input } from '@angular/core';
 export class SpinnerComponent {
   @HostBinding('attr.data-visible')
   @Input()
-  public visible: boolean = true;
+  public visible = true;
 }

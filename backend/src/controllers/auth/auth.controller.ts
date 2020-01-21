@@ -1,6 +1,8 @@
 import { Controller, Get, Post, Req, Request } from '@nestjs/common';
-import { UserService } from '../../services/user/user.service';
+
 import { AuthResponse } from 'shared';
+
+import { UserService } from '../../services/user/user.service';
 
 @Controller('auth')
 export class AuthController {
@@ -13,8 +15,8 @@ export class AuthController {
 	@Get()
 	async index(@Request() req: Request): Promise<string> {
 		return JSON.stringify({
-			result: await this.userService.createUser('Anluin'),
 			all: await this.userService.findAll(),
+			result: await this.userService.createUser('Anluin'),
 		});
 	}
 

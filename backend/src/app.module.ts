@@ -6,16 +6,16 @@ import { User } from './entities/user.entity';
 import { UserService } from './services/user/user.service';
 
 @Module({
+	controllers: [AuthController],
 	imports: [
 		TypeOrmModule.forRoot({
-			type: 'sqlite',
 			database: 'database',
 			entities: [User],
 			synchronize: true,
+			type: 'sqlite',
 		}),
 		TypeOrmModule.forFeature([User]),
 	],
-	controllers: [AuthController],
 	providers: [UserService],
 })
 export class AppModule {

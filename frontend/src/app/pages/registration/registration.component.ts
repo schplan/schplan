@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { register } from '../../actions/auth.actions';
 import { select, Store } from '@ngrx/store';
-import { State } from '../../reducers';
 import { Observable } from 'rxjs';
+import { register } from '../../actions/auth.actions';
+import { State } from '../../reducers';
 import { selectPending } from '../../selectors/auth.selectors';
 
 @Component({
